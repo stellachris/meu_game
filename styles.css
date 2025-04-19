@@ -1,0 +1,168 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do jogo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3a9197;
+    flex-direction: column;
+}
+
+/* Tela inicial */
+#startScreen {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#startScreen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#startButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #fdd835;
+}
+
+/* Área do Jogo */
+#gameArea {
+    width: 1000px;
+    height: 800px;
+    background-color: #41ac88;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000;
+    background-image: url('img/cenario.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none; /* Esconde a área de jogo até o botão ser pressionado */
+    border-radius: 10px;
+}
+
+/* Homer */
+#homer {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -150px;
+    border-radius: 50%;
+    background-image: url('img/live.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Donut */
+#donut {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -20px;
+    background-image: url('img/donuts.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Exibição de pontos */
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Vidas */
+#lives {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.life {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+/* Mensagens de Game Over e Vitória */
+#gameOverMessage,
+#winMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    display: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    background-size: cover;
+    text-align: center;
+}
+
+/* Estilo da mensagem de Game Over */
+#gameOverMessage {
+    font-size: 60px;
+    color: red;
+    background-image: url('img/49QW.gif');
+    background-size: contain;
+    text-align: center;
+}
+
+/* Estilo da mensagem de Vitória */
+#winMessage {
+    font-size: 50px;
+    color: green;
+    background-image: url('img/happy.gif');
+    background-size: contain;
+    text-align: center;
+}
+
+/* Botão de reiniciar */
+#restartButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Inicialmente escondido */
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #fdd835;
+}

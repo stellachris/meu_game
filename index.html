@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homer e os Donuts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="startScreen">
+        <h1>Simpson Eating</h1>
+        <button id="startButton">Iniciar Agora</button>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="gameArea">
+        <div id="homer"></div>
+        <div id="donut"></div>
+        <div id="score">Pontos: 0</div>
+        <div id="lives">
+            <img src="img/donuts.webp" id="life1" class="life" alt="Life 1">
+            <img src="img/donuts.webp" id="life2" class="life" alt="Life 2">
+            <img src="img/donuts.webp" id="life3" class="life" alt="Life 3">
+        </div>
+        <div id="gameOverMessage"></div>
+        <div id="winMessage"></div>
+        <button id="restartButton" style="display:none;">Reiniciar</button> <!-- Botão de reiniciar -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
